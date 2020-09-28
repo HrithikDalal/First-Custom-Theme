@@ -12,3 +12,8 @@ Tags: blog, theme
 .site-content{
 	color: #ffffff;
 }
+
+img{
+	width: 100%;
+	height: auto;
+}

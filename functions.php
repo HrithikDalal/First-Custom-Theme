@@ -47,6 +47,7 @@ if ( ! defined( 'GOT_BUILD_LIB_URI' ) ) {
 }
 
 require_once GOT_DIR_PATH . '/inc/helpers/autoloader.php';
+require_once GOT_DIR_PATH . '/inc/helpers/template-tags.php';
 
 function got_get_theme_instance(){
 	\GOT_THEME\Inc\GOT_THEME::get_instance();
