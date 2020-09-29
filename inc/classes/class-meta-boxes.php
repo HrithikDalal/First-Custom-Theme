@@ -41,11 +41,11 @@ class Meta_Boxes {
 		$screens = [ 'post' ];
 		foreach ( $screens as $screen ) {
 			add_meta_box(
-				'hide-page-title',           // Unique ID
-				__( 'Hide page title', 'got' ),  // Box title
+				'hide-page-title',           // Unique ID.
+				__( 'Hide page title', 'got' ),  // Box title.
 				[ $this, 'custom_meta_box_html' ],  // Content callback, must be of type callable
-				$screen,                   // Post type
-				'side' // context
+				$screen,                   // Post type.
+				'side' // context.
 			);
 		}
 	}
@@ -66,7 +66,7 @@ class Meta_Boxes {
 		 * This will create a hidden input field with id and name as
 		 * 'hide_title_meta_box_nonce_name' and unique nonce input value.
 		 */
-		wp_nonce_field( plugin_basename(__FILE__), 'hide_title_meta_box_nonce_name' );
+		 wp_nonce_field( plugin_basename(__FILE__), 'hide_title_meta_box_nonce_name' );
 
 		?>
 		<label for="got-field"><?php esc_html_e( 'Hide the page title', 'got' ); ?></label>

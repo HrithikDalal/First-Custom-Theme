@@ -59,22 +59,32 @@ function the_post_custom_thumbnail( $post_id, $size = 'featured-thumbnail', $add
 function got_posted_on() {
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 
-	// Post is modified ( when post published time is not equal to post modified time )
-	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
-	}
-
 	$time_string = sprintf( $time_string,
 		esc_attr( get_the_date( DATE_W3C ) ),
-		esc_attr( get_the_date() ),
-		esc_attr( get_the_modified_date( DATE_W3C ) ),
-		esc_attr( get_the_modified_date() )
+		esc_attr( get_the_date() )
 	);
 
 	$posted_on = sprintf(
-		esc_html_x( 'Posted on %s', 'post date', 'aquila' ),
+		esc_html_x( 'Posted on %1$s', 'post date', 'got' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
+
+	// Post is modified ( when post published time is not equal to post modified time ).
+	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+		$update_time_string = '<time class="updated" datetime="%1$s">%2$s</time>';
+
+		$update_time_string = sprintf( $update_time_string,
+			esc_attr( get_the_modified_date( DATE_W3C ) ),
+			esc_attr( get_the_modified_date() )
+		);
+
+		$posted_on = sprintf(
+			esc_html_x( 'Posted on %1$s Updated on %2$s', 'post date', 'got' ),
+			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>',
+			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $update_time_string . '</a>'
+		);
+
+	}
 
 	echo '<span class="posted-on text-secondary">' . $posted_on . '</span>';
 }

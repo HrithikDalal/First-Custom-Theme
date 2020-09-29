@@ -15,7 +15,6 @@ get_header();
 			<?php
 			if ( have_posts() ) :
 				?>
-			<div class="container">
 				<?php
 				if ( is_home() && ! is_front_page() ) {
 					?>
@@ -54,7 +53,6 @@ get_header();
 					endwhile;
 					?>
 				</div>
-			</div>
 			<?php
 
 			else :
@@ -63,7 +61,7 @@ get_header();
 
 			endif;
 
-			aquila_pagination();
+			got_pagination();
 			?>
 		</main>
 	</div>

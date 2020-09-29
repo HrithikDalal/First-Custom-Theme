@@ -44,7 +44,7 @@ class Assets{
 
 	public function register_scripts(){
 		// Register Scripts.
-		wp_register_script( 'main-js', GOT_DIR_URI . '/assets/main.js', [], filemtime( GOT_DIR_PATH . '/assets/main.js' ), true );
+		wp_register_script( 'main-js', GOT_DIR_URI . '/assets/main.js', array( 'jquery' ), filemtime( GOT_DIR_PATH . '/assets/main.js' ), true );
 		wp_register_script( 'bootstrap-js', GOT_DIR_URI . '/assets/src/library/js/bootstrap.min.js', [ 'jquery' ], '4.5.2', true );
 
 		// Enqueue Scripts.
