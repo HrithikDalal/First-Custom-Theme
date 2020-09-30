@@ -33,6 +33,7 @@ class Assets{
 		// Register Styles.
 		wp_register_style( 'bootstrap-css', GOT_DIR_URI . '/assets/src/library/css/bootstrap.min.css', [], '4.5.2', 'all' );
 		wp_register_style( 'main-css', get_stylesheet_uri(), [], filemtime( GOT_DIR_PATH . '/style.css' ), 'all' );
+		wp_register_style( 'font-css', get_template_directory_uri() . '/assets/src/library/fonts/fonts.css', [], false, 'all' );
 
 		// Enqueue Styles.
 		wp_enqueue_style( 'main-css' );
@@ -44,7 +45,7 @@ class Assets{
 
 	public function register_scripts(){
 		// Register Scripts.
-		wp_register_script( 'main-js', GOT_DIR_URI . '/assets/main.js', array( 'jquery' ), filemtime( GOT_DIR_PATH . '/assets/main.js' ), true );
+		wp_register_script( 'main-js', GOT_BUILD_JS_URI . '/main.js', array( 'jquery' ), filemtime( GOT_BUILD_JS_DIR_PATH . '/main.js' ), true );
 		wp_register_script( 'bootstrap-js', GOT_DIR_URI . '/assets/src/library/js/bootstrap.min.js', [ 'jquery' ], '4.5.2', true );
 
 		// Enqueue Scripts.
