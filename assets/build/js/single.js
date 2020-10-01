@@ -81,116 +81,31 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/js/main.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/js/single.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/img/eddard.png":
-/*!****************************!*\
-  !*** ./src/img/eddard.png ***!
-  \****************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("../../src/img/eddard.png");
-
-/***/ }),
-
-/***/ "./src/img/patterns/cover.jpg":
-/*!************************************!*\
-  !*** ./src/img/patterns/cover.jpg ***!
-  \************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("../../src/img/patterns/cover.jpg");
-
-/***/ }),
-
-/***/ "./src/js/clock/index.js":
-/*!*******************************!*\
-  !*** ./src/js/clock/index.js ***!
-  \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-(function ($) {
-  class Clock {
-    constructor() {
-      this.initializeClock();
-    }
-
-    initializeClock() {
-      let t = setInterval(() => this.time(), 1000);
-    }
-
-    numPad(str) {
-      let cStr = str.toString();
-      if (cStr.length < 2) str = 0 + cStr;
-      return str;
-    }
-
-    time() {
-      let currDate = new Date();
-      let currSec = currDate.getSeconds();
-      let currMin = currDate.getMinutes();
-      let curr24Hr = currDate.getHours();
-      let ampm = curr24Hr >= 12 ? 'pm' : 'am';
-      let currHr = curr24Hr % 12;
-      currHr = currHr ? currHr : 12;
-      let stringTime = currHr + ':' + this.numPad(currMin) + ':' + this.numPad(currSec);
-      const timeEmojiEl = $('#time-emoji');
-
-      if (curr24Hr >= 5 && curr24Hr <= 17) {
-        timeEmojiEl.text('🌞');
-      } else {
-        timeEmojiEl.text('🌜');
-      }
-
-      $('#time').text(stringTime);
-      $('#ampm').text(ampm);
-    }
-
-  }
-
-  new Clock();
-})(jQuery);
-
-/***/ }),
-
-/***/ "./src/js/main.js":
-/*!************************!*\
-  !*** ./src/js/main.js ***!
-  \************************/
+/***/ "./src/js/single.js":
+/*!**************************!*\
+  !*** ./src/js/single.js ***!
+  \**************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _clock__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clock */ "./src/js/clock/index.js");
-/* harmony import */ var _clock__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_clock__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _sass_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../sass/main.scss */ "./src/sass/main.scss");
-/* harmony import */ var _sass_main_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_sass_main_scss__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _img_eddard_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../img/eddard.png */ "./src/img/eddard.png");
-/* harmony import */ var _img_patterns_cover_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../img/patterns/cover.jpg */ "./src/img/patterns/cover.jpg");
- //Styles
-
- // Images.
-
-
+/* harmony import */ var _sass_single_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../sass/single.scss */ "./src/sass/single.scss");
+/* harmony import */ var _sass_single_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_sass_single_scss__WEBPACK_IMPORTED_MODULE_0__);
+//Styles
 
 
 /***/ }),
 
-/***/ "./src/sass/main.scss":
-/*!****************************!*\
-  !*** ./src/sass/main.scss ***!
-  \****************************/
+/***/ "./src/sass/single.scss":
+/*!******************************!*\
+  !*** ./src/sass/single.scss ***!
+  \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -199,4 +114,4 @@ __webpack_require__.r(__webpack_exports__);
 /***/ })
 
 /******/ });
-//# sourceMappingURL=main.js.map
+//# sourceMappingURL=single.js.map

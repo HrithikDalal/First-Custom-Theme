@@ -9,9 +9,9 @@ get_header();
 
 
 ?>
-
+<div class="container">
 	<div id="primary">
-		<main id="main" class="site-main mt-5" role="main">
+		<main id="main" class="site-main mt-5 pl-3" role="main">
 			<?php
 			if ( have_posts() ) :
 				?>
@@ -63,8 +63,9 @@ get_header();
 
 			got_pagination();
 			?>
-		</main>
-	</div>
+		</div>
+	</main>
+</div>
 
 <?php
 get_footer();

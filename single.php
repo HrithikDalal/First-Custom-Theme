@@ -7,10 +7,9 @@
 
 get_header();
 ?>
-
-<div id="primary">
-		<main id="main" class="site-main mt-5" role="main">
-			<div class="container">
+<div class="container">
+	<div id="primary">
+			<main id="main" class="site-main mt-5 pl-3" role="main">
 				<div class="row">
 					<div class="col-lg-8 col-md-8 col-sm-12">
 						<?php
