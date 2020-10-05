@@ -9,7 +9,7 @@ get_header();
 ?>
 <div class="container">
 	<div id="primary">
-			<main id="main" class="site-main mt-5 pl-3" role="main">
+			<main id="main" class="site-main mt-3 p-5" role="main">
 				<div class="row">
 					<div class="col-lg-8 col-md-8 col-sm-12">
 						<?php
@@ -57,8 +57,8 @@ get_header();
 				<div class="col-lg-4 col-md-4 col-sm-12">
 					<?php get_sidebar(); ?>
 				</div>
-			</div>
-		</main>
+			</main>
+		</div>
 	</div>
 
 <?php

@@ -7,7 +7,7 @@
 
 get_header();
 ?>
-
+<h1>Hello</h1>
 <div id="primary">
 		<main id="main" class="site-main mt-5" role="main">
 			<div class="home-page-wrap">

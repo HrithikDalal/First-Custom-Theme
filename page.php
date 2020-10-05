@@ -10,4 +10,4 @@ get_header();
 
 <div>SinglePage </div>
 
-<?php get_footer() ?>
+<?php get_footer(); ?>
